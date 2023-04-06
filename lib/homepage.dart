@@ -29,17 +29,17 @@ class _HomePageState extends State<HomePage>
 
   List<ContentView> contentViews = [
     ContentView(
-      tab: CustomTab(title: 'Home'),
+      tab: CustomTab(title: 'home'),
       content: HomeView(),
     ),
     ContentView(
-      tab: CustomTab(title: 'About'),
-      content: AboutView(),
+      tab: CustomTab(title: 'project'),
+      content: ProjectsView(),
     ),
     ContentView(
-      tab: CustomTab(title: 'Projects'),
-      content: ProjectsView(),
-    )
+      tab: CustomTab(title: 'about'),
+      content: AboutView(),
+    ),
   ];
 
   @override
@@ -85,16 +85,6 @@ class _HomePageState extends State<HomePage>
         ),
 
         /// Tab Bar View
-        Container(
-          height: screenHeight * 0.8,
-          child: TabControllerHandler(
-            tabController: tabController,
-            child: TabBarView(
-              controller: tabController,
-              children: contentViews.map((e) => e.content).toList(),
-            ),
-          ),
-        ),
         BottomBar()
       ],
     );
@@ -112,7 +102,7 @@ class _HomePageState extends State<HomePage>
             IconButton(
                 iconSize: screenWidth * 0.08,
                 icon: Icon(Icons.menu_rounded),
-                color: Colors.white,
+                color: Color.fromARGB(255, 191, 0, 220),
                 splashColor: Colors.transparent,
                 onPressed: () => scaffoldKey.currentState?.openEndDrawer()),
             Expanded(
@@ -122,7 +112,7 @@ class _HomePageState extends State<HomePage>
                 itemCount: contentViews.length,
                 itemBuilder: (context, index) => contentViews[index].content,
               ),
-            )
+            ),
           ],
         ),
       ),
@@ -132,15 +122,27 @@ class _HomePageState extends State<HomePage>
   Widget drawer() {
     return Container(
       width: screenWidth * 0.5,
+      color: Colors.transparent,
       child: Drawer(
         child: ListView(
           children: [Container(height: screenHeight * 0.1)] +
               contentViews
                   .map((e) => Container(
                         child: ListTile(
-                          title: Text(
-                            e.tab.title,
-                            style: Theme.of(context).textTheme.button,
+                          title: Row(
+                            children: [
+                              Text(
+                                '#',
+                                style: TextStyle(
+                                    color: Color.fromARGB(255, 191, 0, 220),
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              Text(
+                                e.tab.title,
+                                style: Theme.of(context).textTheme.labelLarge,
+                              ),
+                            ],
                           ),
                           onTap: () {
                             itemScrollController.scrollTo(

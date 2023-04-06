@@ -1,9 +1,5 @@
 class Project {
-  Project({
-    this.title,
-    this.description,
-    this.imageURL
-  });
+  Project({this.title, this.description, this.imageURL});
 
   final String title;
   final String description;

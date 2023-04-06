@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio_website/utils/theme_selector.dart';
-import 'package:portfolio_website/utils/view_wrapper.dart';
-import 'package:portfolio_website/widgets/bullet_list.dart';
-import 'package:portfolio_website/widgets/navigation_arrow.dart';
+
+import '../utils/theme_selector.dart';
+import '../utils/view_wrapper.dart';
+import '../widgets/bullet_list.dart';
+import '../widgets/navigation_arrow.dart';
+
 
 class AboutView extends StatefulWidget {
-  const AboutView({Key key}) : super(key: key);
+  const AboutView({ Key key}) : super(key: key);
 
   @override
   _AboutViewState createState() => _AboutViewState();
@@ -13,8 +15,8 @@ class AboutView extends StatefulWidget {
 
 class _AboutViewState extends State<AboutView>
     with SingleTickerProviderStateMixin {
-  double screenWidth;
-  double screenHeight;
+   double screenWidth;
+   double screenHeight;
   String loremIpsum =
       'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.';
 

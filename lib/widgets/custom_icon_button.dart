@@ -4,10 +4,10 @@ import 'package:url_launcher/url_launcher.dart';
 
 class CustomIconButton extends StatelessWidget {
   const CustomIconButton(
-      {Key key,
-      @required this.iconData,
-      @required this.url,
-      @required this.color})
+      { Key key,
+      this.iconData,
+      this.url,
+      this.color})
       : super(key: key);
   final IconData iconData;
   final String url;
@@ -16,13 +16,16 @@ class CustomIconButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double screenHeight = MediaQuery.of(context).size.height;
-    return IconButton(
-      icon: FaIcon(iconData),
-      onPressed: () => openURL(url),
-      iconSize: screenHeight * 0.05,
-      color: color,
-      splashColor: Colors.transparent,
-      highlightColor: Colors.transparent,
+    return Padding(
+      padding: const EdgeInsets.only(left:2.0,right: 2.0),
+      child: IconButton(
+        icon: FaIcon(iconData),
+        onPressed: () => openURL(url),
+        iconSize: 38,
+        color: color,
+        splashColor: Colors.transparent,
+        highlightColor: Colors.transparent,
+      ),
     );
   }
 

@@ -30,7 +30,7 @@ class BulletPoint extends StatelessWidget {
             Text(
               String.fromCharCode(0x2022),
               style: TextStyle(
-                  color: Color(0xff21a179),
+                  color: Color.fromARGB(197, 191, 0, 220),
                   fontSize: ThemeSelector.selectBodyText(context).fontSize),
             ),
             SizedBox(width: MediaQuery.of(context).size.width * 0.01),

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class ViewWrapper extends StatelessWidget {
   const ViewWrapper(
-      {Key key, @required this.desktopView, @required this.mobileView})
+      {Key key,  this.desktopView,  this.mobileView})
       : super(key: key);
   final Widget desktopView;
   final Widget mobileView;

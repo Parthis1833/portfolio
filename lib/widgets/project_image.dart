@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hovering/hovering.dart';
-import 'package:portfolio_website/utils/project_model.dart';
+
+import '../utils/project_model.dart';
 
 class ProjectImage extends StatelessWidget {
   const ProjectImage(

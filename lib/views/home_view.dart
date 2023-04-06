@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio_website/utils/theme_selector.dart';
-import 'package:portfolio_website/utils/view_wrapper.dart';
-import 'package:portfolio_website/widgets/navigation_arrow.dart';
+
+import '../utils/theme_selector.dart';
+import '../utils/view_wrapper.dart';
+import '../widgets/navigation_arrow.dart';
+
 
 
 class HomeView extends StatefulWidget {
