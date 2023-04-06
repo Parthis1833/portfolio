@@ -33,12 +33,16 @@ class _HomePageState extends State<HomePage>
       content: HomeView(),
     ),
     ContentView(
-      tab: CustomTab(title: 'project'),
+      tab: CustomTab(title: 'about-me'),
       content: ProjectsView(),
     ),
     ContentView(
-      tab: CustomTab(title: 'about'),
+      tab: CustomTab(title: 'project'),
       content: AboutView(),
+    ),
+    ContentView(
+      tab: CustomTab(title: 'contect'),
+      content: ProjectsView(),
     ),
   ];
 
@@ -76,7 +80,6 @@ class _HomePageState extends State<HomePage>
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.end,
       children: [
-        /// Tab Bar
         Container(
           height: screenHeight * 0.05,
           child: CustomTabBar(
@@ -125,7 +128,7 @@ class _HomePageState extends State<HomePage>
       color: Colors.transparent,
       child: Drawer(
         child: ListView(
-          children: [Container(height: screenHeight * 0.1)] +
+          children: [Container(height: screenHeight * 0.05)] +
               contentViews
                   .map((e) => Container(
                         child: ListTile(

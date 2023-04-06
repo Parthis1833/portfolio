@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio_website/homepage.dart';
+
+import 'homepage.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp( MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -14,11 +15,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
           fontFamily: 'Barlow',
           textTheme: TextTheme(
-              headline1: TextStyle(
+              headline1: const TextStyle(
                   fontSize: 70,
                   color: Colors.white,
                   fontFamily: 'DMSerifDisplay'),
-              headline2: TextStyle(
+              headline2: const TextStyle(
                   fontSize: 55,
                   color: Colors.white,
                   fontFamily: 'DMSerifDisplay'),
