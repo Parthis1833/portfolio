@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio_website/utils/project_model.dart';
-import 'package:portfolio_website/utils/theme_selector.dart';
-import 'package:portfolio_website/utils/view_wrapper.dart';
-import 'package:portfolio_website/widgets/navigation_arrow.dart';
-import 'package:portfolio_website/widgets/project_entry.dart';
-import 'package:portfolio_website/widgets/project_image.dart';
+
+import '../utils/project_model.dart';
+import '../utils/theme_selector.dart';
+import '../utils/view_wrapper.dart';
+import '../widgets/navigation_arrow.dart';
+import '../widgets/project_entry.dart';
+import '../widgets/project_image.dart';
 
 class ProjectsView extends StatefulWidget {
-  const ProjectsView({Key key}) : super(key: key);
+  const ProjectsView({key}) : super(key: key);
 
   @override
   _ProjectsViewState createState() => _ProjectsViewState();

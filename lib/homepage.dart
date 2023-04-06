@@ -10,8 +10,6 @@ import 'package:portfolio_website/widgets/custom_tab.dart';
 import 'package:portfolio_website/widgets/custom_tab_bar.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
-
-
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
@@ -68,7 +66,7 @@ class _HomePageState extends State<HomePage>
       body: Padding(
         padding: EdgeInsets.only(top: topPadding, bottom: bottomPadding),
         child:
-        ViewWrapper(desktopView: desktopView(), mobileView: mobileView()),
+            ViewWrapper(desktopView: desktopView(), mobileView: mobileView()),
       ),
     );
   }
@@ -116,7 +114,7 @@ class _HomePageState extends State<HomePage>
                 icon: Icon(Icons.menu_rounded),
                 color: Colors.white,
                 splashColor: Colors.transparent,
-                onPressed: () => scaffoldKey.currentState.openEndDrawer()),
+                onPressed: () => scaffoldKey.currentState?.openEndDrawer()),
             Expanded(
               child: ScrollablePositionedList.builder(
                 scrollDirection: Axis.vertical,
@@ -139,19 +137,19 @@ class _HomePageState extends State<HomePage>
           children: [Container(height: screenHeight * 0.1)] +
               contentViews
                   .map((e) => Container(
-                child: ListTile(
-                  title: Text(
-                    e.tab.title,
-                    style: Theme.of(context).textTheme.button,
-                  ),
-                  onTap: () {
-                    itemScrollController.scrollTo(
-                        index: contentViews.indexOf(e),
-                        duration: Duration(milliseconds: 300));
-                    Navigator.pop(context);
-                  },
-                ),
-              ))
+                        child: ListTile(
+                          title: Text(
+                            e.tab.title,
+                            style: Theme.of(context).textTheme.button,
+                          ),
+                          onTap: () {
+                            itemScrollController.scrollTo(
+                                index: contentViews.indexOf(e),
+                                duration: Duration(milliseconds: 300));
+                            Navigator.pop(context);
+                          },
+                        ),
+                      ))
                   .toList(),
         ),
       ),
