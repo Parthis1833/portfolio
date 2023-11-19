@@ -4,10 +4,10 @@ import 'package:url_launcher/url_launcher.dart';
 
 class CustomIconButton extends StatelessWidget {
   const CustomIconButton(
-      { Key key,
-      this.iconData,
-      this.url,
-      this.color})
+      { Key? key,
+      required this.iconData,
+      required this.url,
+      required this.color})
       : super(key: key);
   final IconData iconData;
   final String url;

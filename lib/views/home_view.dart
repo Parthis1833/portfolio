@@ -12,8 +12,8 @@ class HomeView extends StatefulWidget {
 }
 
 class _HomeViewState extends State<HomeView> {
-  double screenWidth;
-  double screenHeight;
+  late double screenWidth;
+  late double screenHeight;
 
   @override
   Widget build(BuildContext context) {
@@ -26,12 +26,12 @@ class _HomeViewState extends State<HomeView> {
   Widget desktopView() {
     return Stack(
       children: [
-        NavigationArrow(isBackArrow: false),
+        const NavigationArrow(isBackArrow: false),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Container(
+            SizedBox(
               width: screenWidth * 0.45,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,

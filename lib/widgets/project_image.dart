@@ -1,11 +1,11 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' show BorderRadius, BoxDecoration, BoxFit, BuildContext, Center, ClipRRect, Colors, Container, Image, InkWell, Key, MediaQuery, StatelessWidget, Text, TextStyle, Theme, ThemeData, VoidCallback, Widget, required;
 import 'package:hovering/hovering.dart';
 
 import '../utils/project_model.dart';
 
 class ProjectImage extends StatelessWidget {
   const ProjectImage(
-      {Key key, @required this.project, @required this.onPressed})
+      { Key? key, required this.project, required this.onPressed})
       : super(key: key);
   final Project project;
   final VoidCallback onPressed;

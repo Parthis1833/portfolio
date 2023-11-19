@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class CustomTab extends StatelessWidget {
-  CustomTab({@required this.title});
+  CustomTab({required this.title});
 
   final String title;
   

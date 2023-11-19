@@ -7,7 +7,7 @@ import '../widgets/navigation_arrow.dart';
 
 
 class AboutView extends StatefulWidget {
-  const AboutView({ Key key}) : super(key: key);
+  const AboutView({  Key? key}) : super(key: key);
 
   @override
   _AboutViewState createState() => _AboutViewState();
@@ -15,8 +15,8 @@ class AboutView extends StatefulWidget {
 
 class _AboutViewState extends State<AboutView>
     with SingleTickerProviderStateMixin {
-   double screenWidth;
-   double screenHeight;
+   late double screenWidth;
+   late double screenHeight;
   String loremIpsum =
       'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.';
 
@@ -33,21 +33,21 @@ class _AboutViewState extends State<AboutView>
   Widget desktopView() {
     return Stack(
       children: [
-        NavigationArrow(isBackArrow: false),
-        NavigationArrow(isBackArrow: true),
+        const NavigationArrow(isBackArrow: false),
+        const NavigationArrow(isBackArrow: true),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Spacer(flex: 1),
             Expanded(flex: 3, child: infoSection()),
-            Spacer(flex: 1),
+            const Spacer(flex: 1),
             Expanded(
                 flex: 3,
                 child: BulletList(
                   strings: [loremIpsum, loremIpsum, loremIpsum, loremIpsum],
                 )),
-            Spacer(flex: 1),
+            const Spacer(flex: 1),
           ],
         )
       ],
@@ -71,7 +71,7 @@ class _AboutViewState extends State<AboutView>
   }
 
   Widget infoSection() {
-    return Container(
+    return SizedBox(
       width: screenWidth * 0.35,
       child: Column(
         children: [

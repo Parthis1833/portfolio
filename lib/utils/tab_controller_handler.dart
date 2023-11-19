@@ -3,13 +3,13 @@ import 'package:flutter/material.dart';
 class TabControllerHandler extends InheritedWidget {
   final TabController tabController;
 
-  TabControllerHandler({
-    Key key,
-    this.tabController,
-    Widget child,
+  const TabControllerHandler({
+    required Key key,
+    required this.tabController,
+    required Widget child,
   }) : super(key: key, child: child);
 
-  static TabControllerHandler of(BuildContext context) {
+  static TabControllerHandler? of(BuildContext context) {
     return context.dependOnInheritedWidgetOfExactType<TabControllerHandler>();
   }
 
