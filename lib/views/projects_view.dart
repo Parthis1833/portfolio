@@ -15,8 +15,8 @@ class ProjectsView extends StatefulWidget {
 }
 
 class _ProjectsViewState extends State<ProjectsView> {
-  double screenWidth;
-  double screenHeight;
+  late double screenWidth;
+  late double screenHeight;
   int selectedIndex = 0;
   List<Project> projects = [
     Project(
@@ -38,9 +38,9 @@ class _ProjectsViewState extends State<ProjectsView> {
 
   @override
   void didChangeDependencies() {
-    precacheImage(AssetImage('project1.jpg'), context);
-    precacheImage(AssetImage('project2.jpg'), context);
-    precacheImage(AssetImage('project3.jpg'), context);
+    precacheImage(const AssetImage('project1.jpg'), context);
+    precacheImage(const AssetImage('project2.jpg'), context);
+    precacheImage(const AssetImage('project3.jpg'), context);
     super.didChangeDependencies();
   }
 

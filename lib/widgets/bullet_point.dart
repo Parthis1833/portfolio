@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio_website/utils/theme_selector.dart';
+
+import '../utils/theme_selector.dart';
 
 class BulletPoint extends StatelessWidget {
   const BulletPoint(
-      {Key key,
-      @required this.text,
-      @required this.animationController,
-      @required this.index})
+      {Key? key,
+      required this.text,
+      required this.animationController,
+      required this.index})
       : super(key: key);
   final String text;
   final AnimationController animationController;
@@ -31,7 +32,7 @@ class BulletPoint extends StatelessWidget {
               String.fromCharCode(0x2022),
               style: TextStyle(
                   color: Color.fromARGB(197, 191, 0, 220),
-                  fontSize: ThemeSelector.selectBodyText(context).fontSize),
+                  fontSize: ThemeSelector.selectBodyText(context)?.fontSize),
             ),
             SizedBox(width: MediaQuery.of(context).size.width * 0.01),
             Flexible(

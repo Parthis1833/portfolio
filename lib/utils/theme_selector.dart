@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ThemeSelector{
-  static TextStyle selectHeadline(BuildContext context){
+  static TextStyle? selectHeadline(BuildContext context){
     double screenWidth = MediaQuery.of(context).size.width;
     double screenHeight = MediaQuery.of(context).size.height;
     if(screenWidth > 950 && screenHeight > 550){
@@ -12,7 +12,7 @@ class ThemeSelector{
       return Theme.of(context).textTheme.displaySmall;
     }
   }
-  static TextStyle selectSubHeadline(BuildContext context){
+  static TextStyle? selectSubHeadline(BuildContext context){
     double screenWidth = MediaQuery.of(context).size.width;
     double screenHeight = MediaQuery.of(context).size.height;
     if(screenWidth > 715 && screenHeight > 350){
@@ -21,7 +21,7 @@ class ThemeSelector{
       return Theme.of(context).textTheme.subtitle2;
     }
   }
-  static TextStyle selectBodyText(BuildContext context){
+  static TextStyle? selectBodyText(BuildContext context){
     double screenWidth = MediaQuery.of(context).size.width;
     double screenHeight = MediaQuery.of(context).size.height;
     if(screenWidth > 1050 && screenHeight > 850){

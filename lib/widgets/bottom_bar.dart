@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'custom_icon_button.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class BottomBar extends StatelessWidget {
-  BottomBar({Key key}) : super(key: key);
+  BottomBar({Key? key}) : super(key: key);
 
-  Color pinterest = Color.fromARGB(255, 205, 30, 36);
-  Color instagram = Color(0xFFE1306C);
-  Color facebook = Color.fromARGB(255, 59, 88, 152);
-  Color linkedin = Color.fromARGB(255, 36, 136, 190);
-  Color twitter = Color.fromARGB(255, 85, 172, 238);
-  Color discord = Color.fromARGB(255, 114, 137, 218);
+  Color pinterest = const Color.fromARGB(255, 205, 30, 36);
+  Color instagram = const Color(0xFFE1306C);
+  Color facebook = const Color.fromARGB(255, 59, 88, 152);
+  Color linkedin = const Color.fromARGB(255, 36, 136, 190);
+  Color twitter = const Color.fromARGB(255, 85, 172, 238);
+  Color discord = const Color.fromARGB(255, 114, 137, 218);
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
@@ -33,8 +34,36 @@ class BottomBar extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
-                  'Made with Flutter Web © 2021',
+                Column(
+                  children: [
+                    Row(
+                      children: [
+                        SvgPicture.asset(
+                        "assets/Vector 2.svg",
+                        width: 14,
+                        height: 17,
+                        ),
+                        Text("parthisj03@gmail.com",
+                            style: GoogleFonts.getFont(
+                              'Allerta Stencil',
+                              fontSize: 12,
+                              fontWeight: FontWeight.w400,
+                              color: const Color.fromRGBO(123, 135, 156, 1),
+                            ))
+                      ],
+                    ),
+                    Text(
+                        "Web designeer and front-end developer based",
+                        style: GoogleFonts.getFont(
+                          'Allerta Stencil',
+                          fontWeight: FontWeight.w400,
+                        )
+                    )
+                  ],
+                ),
+
+                const Text(
+                  ' © Copyright  2023. Made by Parthish',
                   style: TextStyle(
                     color: Colors.white,
                     fontFamily: 'Barlow',
@@ -58,8 +87,7 @@ class BottomBar extends StatelessWidget {
                         children: [
                           CustomIconButton(
                             iconData: FontAwesomeIcons.facebook,
-                            url:
-                                'https://www.facebook.com/joshi.parthis.73?mibextid=ZbWKwL',
+                            url: 'https://www.facebook.com/joshi.parthis.73?mibextid=ZbWKwL',
                             color: facebook,
                           ),
                           InkWell(
@@ -70,7 +98,7 @@ class BottomBar extends StatelessWidget {
                             },
                             child: ShaderMask(
                               shaderCallback: (Rect bounds) {
-                                return LinearGradient(
+                                return const LinearGradient(
                                   begin: Alignment.topLeft,
                                   end: Alignment.bottomRight,
                                   colors: [
@@ -85,7 +113,7 @@ class BottomBar extends StatelessWidget {
                                   ],
                                 ).createShader(bounds);
                               },
-                              child: Icon(
+                              child: const Icon(
                                 FontAwesomeIcons.instagram,
                                 size: 43,
                                 color: Colors.white,

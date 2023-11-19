@@ -1,11 +1,13 @@
 # This is a generated file; do not edit or check into version control.
-path_provider=/home/parthis/.pub-cache/hosted/pub.dev/path_provider-2.0.14/
-path_provider_android=/home/parthis/.pub-cache/hosted/pub.dev/path_provider_android-2.0.24/
-path_provider_foundation=/home/parthis/.pub-cache/hosted/pub.dev/path_provider_foundation-2.2.1/
-path_provider_linux=/home/parthis/.pub-cache/hosted/pub.dev/path_provider_linux-2.1.10/
-path_provider_windows=/home/parthis/.pub-cache/hosted/pub.dev/path_provider_windows-2.1.5/
-url_launcher=/home/parthis/.pub-cache/hosted/pub.dev/url_launcher-6.0.3/
-url_launcher_linux=/home/parthis/.pub-cache/hosted/pub.dev/url_launcher_linux-2.0.0/
-url_launcher_macos=/home/parthis/.pub-cache/hosted/pub.dev/url_launcher_macos-2.0.0/
-url_launcher_web=/home/parthis/.pub-cache/hosted/pub.dev/url_launcher_web-2.0.0/
-url_launcher_windows=/home/parthis/.pub-cache/hosted/pub.dev/url_launcher_windows-2.0.0/
+path_provider=/home/parthish/.pub-cache/hosted/pub.dev/path_provider-2.1.1/
+path_provider_android=/home/parthish/.pub-cache/hosted/pub.dev/path_provider_android-2.2.1/
+path_provider_foundation=/home/parthish/.pub-cache/hosted/pub.dev/path_provider_foundation-2.3.1/
+path_provider_linux=/home/parthish/.pub-cache/hosted/pub.dev/path_provider_linux-2.2.1/
+path_provider_windows=/home/parthish/.pub-cache/hosted/pub.dev/path_provider_windows-2.2.1/
+url_launcher=/home/parthish/.pub-cache/hosted/pub.dev/url_launcher-6.2.1/
+url_launcher_android=/home/parthish/.pub-cache/hosted/pub.dev/url_launcher_android-6.2.0/
+url_launcher_ios=/home/parthish/.pub-cache/hosted/pub.dev/url_launcher_ios-6.2.0/
+url_launcher_linux=/home/parthish/.pub-cache/hosted/pub.dev/url_launcher_linux-3.1.0/
+url_launcher_macos=/home/parthish/.pub-cache/hosted/pub.dev/url_launcher_macos-3.1.0/
+url_launcher_web=/home/parthish/.pub-cache/hosted/pub.dev/url_launcher_web-2.2.0/
+url_launcher_windows=/home/parthish/.pub-cache/hosted/pub.dev/url_launcher_windows-3.1.0/

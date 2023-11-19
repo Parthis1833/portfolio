@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio_website/utils/content_view.dart';
-import 'package:portfolio_website/utils/tab_controller_handler.dart';
-import 'package:portfolio_website/utils/view_wrapper.dart';
-import 'package:portfolio_website/views/about_view.dart';
-import 'package:portfolio_website/views/home_view.dart';
-import 'package:portfolio_website/views/projects_view.dart';
-import 'package:portfolio_website/widgets/bottom_bar.dart';
-import 'package:portfolio_website/widgets/custom_tab.dart';
-import 'package:portfolio_website/widgets/custom_tab_bar.dart';
+import 'package:portfoilio/utils/content_view.dart';
+import 'package:portfoilio/utils/view_wrapper.dart';
+import 'package:portfoilio/views/about_view.dart';
+import 'package:portfoilio/views/home_view.dart';
+import 'package:portfoilio/views/projects_view.dart';
+import 'package:portfoilio/widgets/bottom_bar.dart';
+import 'package:portfoilio/widgets/custom_tab.dart';
+import 'package:portfoilio/widgets/custom_tab_bar.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
 class HomePage extends StatefulWidget {
@@ -17,15 +16,15 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage>
     with SingleTickerProviderStateMixin {
-  TabController tabController;
-  ItemScrollController itemScrollController;
+  late TabController tabController;
+  late ItemScrollController itemScrollController;
   var scaffoldKey = GlobalKey<ScaffoldState>();
 
-  double screenHeight;
-  double screenWidth;
-  double topPadding;
-  double bottomPadding;
-  double sidePadding;
+  late double screenHeight;
+  late double screenWidth;
+  late double topPadding;
+  late double bottomPadding;
+  late double sidePadding;
 
   List<ContentView> contentViews = [
     ContentView(
@@ -104,8 +103,8 @@ class _HomePageState extends State<HomePage>
           children: [
             IconButton(
                 iconSize: screenWidth * 0.08,
-                icon: Icon(Icons.menu_rounded),
-                color: Color.fromARGB(255, 191, 0, 220),
+                icon: const Icon(Icons.menu_rounded),
+                color: const Color.fromARGB(255, 191, 0, 220),
                 splashColor: Colors.transparent,
                 onPressed: () => scaffoldKey.currentState?.openEndDrawer()),
             Expanded(
@@ -134,7 +133,7 @@ class _HomePageState extends State<HomePage>
                         child: ListTile(
                           title: Row(
                             children: [
-                              Text(
+                              const Text(
                                 '#',
                                 style: TextStyle(
                                     color: Color.fromARGB(255, 191, 0, 220),
@@ -150,7 +149,7 @@ class _HomePageState extends State<HomePage>
                           onTap: () {
                             itemScrollController.scrollTo(
                                 index: contentViews.indexOf(e),
-                                duration: Duration(milliseconds: 300));
+                                duration: const Duration(milliseconds: 300));
                             Navigator.pop(context);
                           },
                         ),
